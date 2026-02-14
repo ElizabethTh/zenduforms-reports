@@ -46,56 +46,6 @@ The objective was to build a visually accurate and functional Angular applicatio
 
 ---
 
-## 🧱 Project Structure
-
-# ZenduForms – All Reports Page (Angular Case Study)
-
-This project implements the **All Reports** page based on the provided Figma design as part of a front-end case study.
-
-The objective was to build a visually accurate and functional Angular application focusing on clean architecture, usability, and maintainable code.
-
----
-
-## Features
-
-### UI Implementation
-
-- Header navigation layout
-- All Reports page based on Figma design
-- Search input with filtering
-- Add new report button
-- Sort dropdown (Newest / Oldest)
-- Reports list with structured layout
-- Pagination controls
-
----
-
-### Functional Features
-
-- Search filtering by:
-  - Report name
-  - Owner
-  - Associated form
-
-- Sorting:
-  - Newest first
-  - Oldest first
-
-- Pagination:
-  - Dynamic page calculation
-  - Page navigation buttons
-  - Record range display
-
-- Delete report:
-  - Confirmation dialog
-  - UI state update
-
--  Row interaction:
-  - Click selection
-  - Keyboard accessibility support
-
----
-
 ## Project Structure
 
 src/
@@ -116,7 +66,7 @@ src/
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - Angular (Standalone Components)
 - TypeScript
