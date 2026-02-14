@@ -1,59 +1,188 @@
-# ZenduformsReports
+# ZenduForms – All Reports Page (Angular Case Study)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+This project implements the **All Reports** page based on the provided Figma design as part of a front-end case study.
 
-## Development server
+The objective was to build a visually accurate and functional Angular application focusing on clean architecture, usability, and maintainable code.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### UI Implementation
 
-## Code scaffolding
+- Header navigation layout
+- All Reports page based on Figma design
+- Search input with filtering
+- Add new report button
+- Sort dropdown (Newest / Oldest)
+- Reports list with structured layout
+- Pagination controls
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+### Functional Features
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Search filtering by:
+  - Report name
+  - Owner
+  - Associated form
 
-```bash
-ng generate --help
-```
+- Sorting:
+  - Newest first
+  - Oldest first
 
-## Building
+- Pagination:
+  - Dynamic page calculation
+  - Page navigation buttons
+  - Record range display
 
-To build the project run:
+- Delete report:
+  - Confirmation dialog
+  - UI state update
 
-```bash
-ng build
-```
+-  Row interaction:
+  - Click selection
+  - Keyboard accessibility support
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🧱 Project Structure
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+# ZenduForms – All Reports Page (Angular Case Study)
 
-```bash
-ng test
-```
+This project implements the **All Reports** page based on the provided Figma design as part of a front-end case study.
 
-## Running end-to-end tests
+The objective was to build a visually accurate and functional Angular application focusing on clean architecture, usability, and maintainable code.
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
-```
+## Features
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### UI Implementation
 
-## Additional Resources
+- Header navigation layout
+- All Reports page based on Figma design
+- Search input with filtering
+- Add new report button
+- Sort dropdown (Newest / Oldest)
+- Reports list with structured layout
+- Pagination controls
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+### Functional Features
+
+- Search filtering by:
+  - Report name
+  - Owner
+  - Associated form
+
+- Sorting:
+  - Newest first
+  - Oldest first
+
+- Pagination:
+  - Dynamic page calculation
+  - Page navigation buttons
+  - Record range display
+
+- Delete report:
+  - Confirmation dialog
+  - UI state update
+
+-  Row interaction:
+  - Click selection
+  - Keyboard accessibility support
+
+---
+
+## Project Structure
+
+src/
+├── app/
+│ ├── core/
+│ │ └── models/
+│ │ └── report.model.ts
+│ │
+│ ├── features/
+│ │ └── reports/
+│ │ └── pages/
+│ │ └── all-reports/
+│ │ ├── all-reports.ts
+│ │ ├── all-reports.html
+│ │ └── all-reports.scss
+│ │
+│ └── shared/
+
+---
+
+## 🛠 Technologies Used
+
+- Angular (Standalone Components)
+- TypeScript
+- SCSS
+- Angular Material (Icons)
+- ESLint (Angular rules)
+
+---
+
+##  Setup Instructions
+
+### Install dependencies
+
+npm install
+---
+
+### Run development server
+npm install
+
+Open: http://localhost:4200
+
+---
+
+### Production build
+
+ng build --configuration production
+
+---
+
+### Linting
+
+ng lint
+
+---
+
+## Mock Data
+
+Mock data is separated for maintainability:
+
+report-mock.ts
+
+---
+
+## Design Approach
+
+- Layout implemented to closely match provided Figma design
+- Consistent spacing and typography applied
+- CSS variables used for reusable color styling
+- Grid layout used for predictable alignment
+
+---
+
+## Notes for Reviewers
+
+- Angular standalone component architecture used
+- Accessibility lint rules addressed
+- Clean separation between UI and data logic
+- Organized feature-based folder structure
+
+---
+
+##  Author
+
+Elizabeth Thomas
+
+
+
+
+

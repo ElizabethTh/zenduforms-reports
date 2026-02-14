@@ -1,0 +1,98 @@
+<div class="reports-page">
+  <div class="reports-container">
+    <!-- HEADER SECTION -->
+    <div class="reports-header">
+      <!-- LEFT -->
+      <div class="left-section">
+        <h1 class="page-title">All Reports</h1>
+
+        <div class="search-box">
+          <mat-icon>search</mat-icon>
+          <input type="text" placeholder="Search..." (input)="onSearch($event.target.value)" />
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="right-section">
+        <button class="add-btn">
+          <mat-icon>add</mat-icon>
+          Add new Report
+        </button>
+
+        <div class="sort-section">
+          <span class="sort-label">Sort by:</span>
+
+          <select class="sort-select" (change)="onSortChange($event)">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- REPORT LIST -->
+    <div class="reports-list">
+      <div
+        class="report-row"
+        *ngFor="let report of paginatedReports"
+        (click)="selectReport(report.id)"
+        (keydown.enter)="selectReport(report.id)"
+        (keydown.space)="selectReport(report.id)"
+        tabindex="0"
+        role="button"
+        [class.selected]="selectedReportId === report.id"
+      >
+        <div class="report-left">
+          <mat-icon>pie_chart</mat-icon>
+          <span class="report-name">{{ report.name }}</span>
+        </div>
+
+        <div class="report-col">
+          <span class="col-label">Created:</span>
+          {{ report.created }}
+        </div>
+
+        <div class="report-col">
+          <span class="col-label">Modified:</span>
+          {{ report.modified }}
+        </div>
+
+        <div class="report-col">
+          <span class="col-label">Owner:</span>
+          {{ report.owner }}
+        </div>
+
+        <div class="report-col form">
+          <span class="col-label">Form:</span>
+          <span>{{ report.form }}</span>
+        </div>
+
+        <div class="actions">
+          <mat-icon class="delete" (click)="deleteReport(report.id, $event)"> delete </mat-icon>
+          <mat-icon class="edit">edit</mat-icon>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <div class="info">
+        {{ startRecord }} - {{ endRecord }} of {{ filteredReports.length }} History Records
+      </div>
+
+      <div class="pages">
+        <button (click)="previousPage()" [disabled]="currentPage === 1">&lt;</button>
+
+        <button
+          *ngFor="let page of pages"
+          (click)="goToPage(page)"
+          [ngClass]="{ active: currentPage === page }"
+        >
+          {{ page }}
+        </button>
+
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">&gt;</button>
+      </div>
+    </div>
+  </div>
+</div>

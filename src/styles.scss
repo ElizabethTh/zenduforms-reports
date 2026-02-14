@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  /* PRIMARY */
+  --color-primary: #2188d9;
+  --color-primary-dark: #1773bb;
+
+  /* TEXT */
+  --color-text-main: #060c1b;
+  --color-text-muted: #b8b9bc;
+
+  /* STATUS */
+  --color-danger: #ff3d00;
+
+  /* BACKGROUND */
+  --color-bg-white: #ffffff;
+  --color-bg-hover: #f5f8fc;
+  --color-bg-selected: #f1f5f8;
+  --color-bg-border: #b8b9bc;
+
+  /* BORDER */
+  --color-border-light: #ececed;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #ffffff;
+}
