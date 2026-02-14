@@ -1,6 +1,0 @@
-[build]
-command = "ng build"
-publish = "dist/zenduforms-reports/browser"
-
-[build.environment]
-NETLIFY_SKIP_ANGULAR_RUNTIME = "true"
