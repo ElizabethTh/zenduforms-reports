@@ -21,6 +21,7 @@ export class AllReports implements OnInit {
 
   currentPage = 1;
   pageSize = 5;
+  currentSort: 'newest' | 'oldest' = 'newest';
 
   ngOnInit(): void {
     // Initialize data and apply default sorting
@@ -32,16 +33,17 @@ export class AllReports implements OnInit {
     this.selectedReportId = id;
   }
 
-  onSortChange(event: Event): void {
-    const value = (event.target as HTMLSelectElement).value;
+  onSortChange(event: Event) {
+    const value = (event.target as HTMLSelectElement).value as 'newest' | 'oldest';
+    this.currentSort = value;
     this.sortReports(value);
   }
 
   onSearch(value: string): void {
     const term = value.trim().toLowerCase();
-
     if (!term) {
       this.filteredReports = [...this.reports];
+      this.sortReports(this.currentSort);
     } else {
       this.filteredReports = this.reports.filter(
         (report) =>
@@ -50,7 +52,6 @@ export class AllReports implements OnInit {
           report.form.toLowerCase().includes(term),
       );
     }
-
     // Reset pagination when filtering
     this.currentPage = 1;
   }
