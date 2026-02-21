@@ -48,8 +48,8 @@ export class AllReports implements OnInit {
       this.filteredReports = this.reports.filter(
         (report) =>
           report.name.toLowerCase().includes(term) ||
-          report.owner.toLowerCase().includes(term) ||
-          report.form.toLowerCase().includes(term),
+          report.occasion.toLowerCase().includes(term) ||
+          report.weight.toString().includes(term),
       );
     }
     // Reset pagination when filtering
@@ -77,11 +77,11 @@ export class AllReports implements OnInit {
   sortReports(order: string): void {
     if (order === 'newest') {
       this.filteredReports.sort(
-        (a, b) => new Date(b.created).getTime() - new Date(a.created).getTime(),
+        (a, b) => new Date(b.packed).getTime() - new Date(a.packed).getTime(),
       );
     } else {
       this.filteredReports.sort(
-        (a, b) => new Date(a.created).getTime() - new Date(b.created).getTime(),
+        (a, b) => new Date(a.packed).getTime() - new Date(b.packed).getTime(),
       );
     }
 

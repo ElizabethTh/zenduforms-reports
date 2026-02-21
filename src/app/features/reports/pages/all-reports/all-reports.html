@@ -4,7 +4,7 @@
     <div class="reports-header">
       <!-- LEFT -->
       <div class="left-section">
-        <h1 class="page-title">All Reports</h1>
+        <h1 class="page-title">All Cake Collections</h1>
 
         <div class="search-box">
           <mat-icon>search</mat-icon>
@@ -16,7 +16,7 @@
       <div class="right-section">
         <button class="add-btn">
           <mat-icon>add</mat-icon>
-          Add new Report
+          Add New Cake
         </button>
 
         <div class="sort-section">
@@ -48,23 +48,23 @@
         </div>
 
         <div class="report-col">
-          <span class="col-label">Created:</span>
-          {{ report.created }}
+          <span class="col-label">Packed:</span>
+          {{ report.packed }}
         </div>
 
         <div class="report-col">
-          <span class="col-label">Modified:</span>
-          {{ report.modified }}
+          <span class="col-label">Expired:</span>
+          {{ report.expired }}
         </div>
 
         <div class="report-col">
-          <span class="col-label">Owner:</span>
-          {{ report.owner }}
+          <span class="col-label">Occasion:</span>
+          {{ report.occasion }}
         </div>
 
         <div class="report-col form">
-          <span class="col-label">Form:</span>
-          <span>{{ report.form }}</span>
+          <span class="col-label">Weight:</span>
+          <span>{{ report.weight }} kg</span>
         </div>
 
         <div class="actions">
